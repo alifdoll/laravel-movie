@@ -20,6 +20,11 @@ if (file_exists(__DIR__.'/../storage/framework/maintenance.php')) {
     require __DIR__.'/../storage/framework/maintenance.php';
 }
 
+// UNTUK DI SERVER
+// if (file_exists(__DIR__.'/../../repositories/laravel-movie/storage/framework/maintenance.php')) {
+//     require __DIR__.'/../../repositories/laravel-movie/storage/framework/maintenance.php';
+// }
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
@@ -31,7 +36,13 @@ if (file_exists(__DIR__.'/../storage/framework/maintenance.php')) {
 |
 */
 
+
 require __DIR__.'/../vendor/autoload.php';
+
+
+// UNTUK DI SERVER
+// require __DIR__.'/../../repositories/laravel-movie/vendor/autoload.php';
+
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +55,12 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
+
+
 $app = require_once __DIR__.'/../bootstrap/app.php';
+
+// UNTUK DI SERVER
+// $app = require_once __DIR__.'/../../repositories/laravel-movie/bootstrap/app.php';
 
 $kernel = $app->make(Kernel::class);
 
