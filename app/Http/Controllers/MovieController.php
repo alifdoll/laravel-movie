@@ -20,6 +20,11 @@ class MovieController extends Controller
         return view('index', compact('movies'));
     }
 
+    public function grid(){
+        $movies = Movie::all();
+        return view('grid', compact('movies'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Source CSS -->
-    <link type="text/css" rel="stylesheet" href="{{URL::to('css/list.css')}}">
-
+    @yield('css')
    
 
     <title>ATIGA MOVIES</title>
@@ -18,7 +16,7 @@
         <!-- Area input dan Button -->
         <form action="list.php" method="post">
         <div class="searchGrouping">
-        <a href="grid.php"><img src="https://img.icons8.com/metro/26/000000/activity-grid-2.png" class="img-place"></a>
+            @yield('link')
             <div class="space">
                 <input type="text" placeholder="   Searching..." class="txt-search" name="search" id="search">
             </div>

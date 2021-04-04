@@ -1,5 +1,13 @@
 @extends('/layout/main')
 
+@section('css')
+<link type="text/css" rel="stylesheet" href="{{URL::to('css/list.css')}}">
+@endsection
+
+@section('link')
+<a href="/grid"><img src="https://img.icons8.com/metro/26/000000/activity-grid-2.png" class="img-place"></a>
+@endsection
+
 @section('container')
 <section class="container">
     <div class="item" id="item-movie">
