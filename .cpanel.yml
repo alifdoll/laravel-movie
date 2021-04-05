@@ -2,8 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/u3222044/public_html/dev.pusingkuliah.com
-    - /bin/cp  -R Asset $DEPLOYPATH
-    - /bin/cp  -R css $DEPLOYPATH
+    - /bin/cp  -R public $DEPLOYPATH
     - /bin/cp  /public/.htaccess $DEPLOYPATH
     - /bin/cp  /public/favicon.ico $DEPLOYPATH
     - /bin/cp  /public/index.php $DEPLOYPATH
