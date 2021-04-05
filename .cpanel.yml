@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/u3222044/public_html/dev.pusingkuliah.com/
-    - /bin/cp /public/* $DEPLOYPATH
+    - /bin/cp public/* $DEPLOYPATH
