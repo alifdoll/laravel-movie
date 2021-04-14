@@ -14,17 +14,25 @@ class MovieController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    private static function showMovie(){
+        $movies = Movie::paginate(2);
+        return $movies;
+    }
+
+    
     public function index()
     {
-        $movies = Movie::all();
+        $movies = MovieController::showMovie();
         return view('index', compact('movies'));
     }
 
     public function grid(){
-        $movies = Movie::all();
+        $movies = MovieController::showMovie();
+        $movies->withPath('/grid');
         return view('grid', compact('movies'));
     }
 
+    
     /**
      * Show the form for creating a new resource.
      *
