@@ -25,4 +25,24 @@
             @endforeach
         </div>
     </section>
+
+
+        
+<section class="container">
+    <div class="page">
+        <ul>
+        @foreach(range(1, $movies->lastPage()) as $totalPage)
+            @if ($totalPage == $movies->currentPage())
+                {{-- <li class="page-item active" aria-current="page"><span class="page-link">{{ $totalPage }}</span></li> --}}
+                <li class="page-item active" style="font-weight: bold" ><a class="page-link" href="#">{{ $totalPage }}</a></li>
+                {{-- <a class="page active" aria-current="page" href=""><span class="page-link">{{ $totalPage }}</span></a> --}}
+            @else
+                {{-- <li class="page-item"><a class="page-link" href="{{ $movies->url($totalPage) }}">{{ $totalPage }}</a></li> --}}
+                <li class="page-item"><a class="page-link" href="{{ $movies->url($totalPage) }}">{{ $totalPage }}</a></li>
+                {{-- <a  class="page page-item page-link" href="{{ $movies->url($totalPage) }}">{{ $totalPage }}/a> --}}
+            @endif
+        @endforeach
+        </ul>
+    </div>
+</section>
 @endsection
