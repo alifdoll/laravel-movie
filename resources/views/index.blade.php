@@ -13,7 +13,7 @@
     <div class="item" id="item-movie">
         @foreach($movies as $movie)
         <div class="list-item">
-            <img src="{{$movie->extension}}" alt="" class="img-select">
+            <img class="img-select" src="{{$movie->extension}}" >
             <div class="deskripsi">
                 <div class="caption">
                     <h3>{{$movie->title}}</h3>
